@@ -70,5 +70,6 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 6.1'
 gem 'rails-controller-testing', group: [:test]
 gem 'rspec-rails', group: [:test]
-gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+gem 'simple_form', github: 'heartcombo/simple_form'
+
