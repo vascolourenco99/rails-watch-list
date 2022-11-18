@@ -1,9 +1,17 @@
-<h1>Lists</h1>
-<p><%= link_to "Create a List!", new_list_path %></p>
+<div class="banner" style="background-image: url('<%= image_path "cinema1.png" %>')">
+  <div class="container">
+    <h1>Watch List!</h1>
+    <%= link_to "Create a List!", new_list_path, class:"btn btn-flat"%>
+  </div>
+</div>
 
-<ul>
-    <% @lists.each do |list| %>
-    <ol><%= link_to list.name, list_path(list) %>
-    </ol>
-    <% end %>
-</ul>
+<div class="cards m-5">
+        <% @lists.each do |list| %>
+            <%= link_to list_path(list), class:"text-decoration-none" do %>
+                    <div class="card-category">
+                        <h2><%= list.name %></h2>
+                    </div>
+            <% end %>
+        <% end %>
+</div>
+

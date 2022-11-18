@@ -1,6 +1,10 @@
-<%= simple_form_for [@list] do |f|%>
-  <%= f.input :name %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+<body class="m-5">
+  <%= simple_form_for [@list] do |f|%>
+    <%= f.input :name %>
+    <%= f.submit "Submit", class:"btn btn-flat" %>
+  <% end %>
+</body>
 
-<%= link_to "All lists", lists_path %>
+<div class="mt-5">
+  <div><%= link_to "Create a List!", new_list_path(@list), class:"btn btn-flat" %></div>
+</div>

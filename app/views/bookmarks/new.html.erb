@@ -1,8 +1,13 @@
 <h1>Add a movie</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment  %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
 
-<%= link_to "ALl lists", lists_path %>
+<body class="m-5">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment  %>
+    <%= f.submit "Submit", class:"btn btn-flat" %>
+  <% end %>
+</body>
+
+<div class="mt-5">
+<%= link_to "All lists", lists_path, class:"btn btn-flat" %>
+</div>
